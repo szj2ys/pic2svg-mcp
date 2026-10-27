@@ -1,0 +1,45 @@
+{
+  "name": "pic2svg-mcp",
+  "version": "0.1.0",
+  "description": "Trace raster images into SVG through Pic2svg: a dependency-free MCP server, Node client and command-line tool.",
+  "type": "module",
+  "bin": {
+    "pic2svg-mcp": "./pic2svg-mcp.mjs"
+  },
+  "main": "./client.mjs",
+  "exports": {
+    ".": "./client.mjs",
+    "./server": "./pic2svg-mcp.mjs"
+  },
+  "files": [
+    "pic2svg-mcp.mjs",
+    "client.mjs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check-release": "node scripts/check-release.mjs",
+    "prepublishOnly": "node --test && node scripts/check-release.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "svg",
+    "vectorize",
+    "image-to-svg",
+    "vtracer",
+    "cli"
+  ],
+  "homepage": "https://github.com/szj2ys/pic2svg-mcp#readme",
+  "bugs": {
+    "email": "support@pic2svg.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szj2ys/pic2svg-mcp.git"
+  }
+}
